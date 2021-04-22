@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hello world !!!!!!!!!!!!!!!!!{{name}}</h1>
+
+  <form action="add" method="post">
+    {% csrf_token %}
+    Enter 1st number::<input type="text" name='num1' required><br>
+    Enter 1st number::<input type="text" name='num2' required><br>
+  
+    <label for="choice">Enter your Choice</label><br>
+    <input type="radio" id="choice" name="num3" value='1' required>Addition<br>
+    <input type="radio" id="choice" name="num3" value='2' required>Subtraction<br>
+    <input type="radio" id="choice" name="num3" value='3' required>Divide<br>
+    <input type="radio" id="choice" name="num3" value='4' required>Multiply<br>
+    <input type="radio" id="choice" name="num3" value='5' required>Power<br>
+  
+
+    
+    <input type="submit">
+  </form>
+{% endblock %}
+
+
+
